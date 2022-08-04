@@ -1,0 +1,733 @@
+@media screen and (max-width: 374px) {
+    /* ======================================================sectionAll============================================================ */
+    .container {
+        max-width: 325px;
+        margin: auto;
+    }
+    /* ======================================================cart section============================================================ */
+    #sidebar {
+        width: 300px
+    }
+    /* ==================================================scrollnav section========================================================= */
+    .scrollnavsection .scrollnavcontainer .scrollnav-col1 .scrollnav-loc {
+        display: none;
+    }
+    .scrollnavsection .scrollnavcontainer .scrollnav-col1 .scrollnav-buy {
+        display: none;
+    }
+    .scrollnavsection .scrollnavcontainer .scrollnav-col3 .scrollnav-login {
+        display: none;
+    }
+    .scrollnavsection .scrollnavcontainer .scrollnav-col3 .scrollnav-login .box-login-logout {
+        display: none;
+    }
+    .scrollnavsection .scrollnavcontainer .scrollnav-col3 .scrollnav-cart {
+        display: none;
+    }
+    /* =======================================================section1============================================================= */
+    .firstcontainer {
+        max-width: 355px;
+        margin: auto;
+    }
+    .firstsection .firstcontainer .text-car .text {
+        font-size: 12px;
+    }
+    /* =======================================================section2============================================================= */
+    .secoundsection {
+        height: 270px
+    }
+    /* ===============row1=============== */
+    /* .secoundsection .secoundcontainer .row1 .login .snap-cart {
+        display: none;
+    } */
+    .secoundsection .secoundcontainer .row1 .login .snap-login .login-logout {
+        display: none;
+    }
+    /* ===============row2=============== */
+    .secoundsection .secoundcontainer .row2 .hyper-logo .by {
+        display: none;
+    }
+    .secoundsection .secoundcontainer .row2 .chenge-shapping {
+        padding-right: 10px;
+    }
+    .secoundsection .secoundcontainer .row2 .chenge-shapping button {
+        width: 80px!important;
+        height: 20px!important;
+        padding: 4px 8px 3px 5px!important;
+    }
+    .secoundsection .secoundcontainer .row2 {
+        flex-wrap: wrap;
+    }
+    .secoundsection .secoundcontainer .row2 .date {
+        flex-basis: 100%;
+        flex-wrap: wrap;
+    }
+    .secoundsection .secoundcontainer .row2 {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.185);
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    /* ===============row3=============== */
+    .secoundsection .secoundcontainer .row3 .part {
+        display: none;
+    }
+    .secoundsection .secoundcontainer .row3 .search {
+        flex-basis: 100%;
+    }
+    .secoundsection .secoundcontainer .row3 .search .has-search {
+        width: 100%;
+    }
+    .secoundsection .secoundcontainer .row3 .search .has-search .form-control {
+        padding: 7px 8px 7px 10px;
+    }
+    /* =======================================================section3============================================================= */
+    .thirdsection {
+        display: none;
+    }
+    /* =======================================================section4============================================================= */
+    .owl-carousel {
+        max-width: 325px;
+        margin-right: auto;
+    }
+    .fourthsection .fourthcontainer .sale {
+        display: none!important;
+    }
+    /* =======================================================section box============================================================= */
+    .boxsection {
+        display: none;
+    }
+    /* =======================================================section6============================================================= */
+    .sixthsection .sixthcontainer .hr1 {
+        flex-basis: 25%;
+    }
+    .sixthsection .sixthcontainer .categories {
+        flex-basis: 50%;
+    }
+    .sixthsection .sixthcontainer .hr2 {
+        flex-basis: 25%;
+    }
+    /* =======================================================section7============================================================= */
+    .seventhsection {
+        display: none;
+    }
+    /* =======================================================section8============================================================= */
+    .eighthsection {
+        display: none;
+    }
+    /* =======================================================section13============================================================= */
+    /* ===============row1=============== */
+    .thirteenthsection .thirteenthcontainer .row1 {
+        flex-wrap: wrap;
+    }
+    .thirteenthsection .thirteenthcontainer .row1 .col1 {
+        flex-basis: 100%;
+    }
+    .thirteenthsection .thirteenthcontainer .row1 .col2 {
+        flex-basis: 100%;
+        margin-top: 20px;
+    }
+    /* ===============row2=============== */
+    .thirteenthsection .thirteenthcontainer .row2 .col2 {
+        display: none;
+    }
+    .thirteenthsection .thirteenthcontainer .row2 .col1 {
+        text-align: center;
+        flex-basis: 100%;
+    }
+    .thirteenthsection .thirteenthcontainer .row2 .col1 .available-application {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center
+    }
+    /* ===============row3=============== */
+    .thirteenthsection .thirteenthcontainer .about {
+        display: none;
+    }
+    .thirteenthsection .thirteenthcontainer .row3 {
+        flex-wrap: wrap;
+    }
+    .thirteenthsection .thirteenthcontainer .row3 .logs {
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (min-width: 374px) {
+    /* ======================================================sectionAll============================================================ */
+    .container {
+        max-width: 350px;
+        margin: auto;
+    }
+    /* ======================================================cart section============================================================ */
+    #sidebar {
+        width: 300px
+    }
+    /* ==================================================scrollnav section========================================================= */
+    .scrollnavsection .scrollnavcontainer .scrollnav-col1 .scrollnav-loc {
+        display: none;
+    }
+    .scrollnavsection .scrollnavcontainer .scrollnav-col1 .scrollnav-buy {
+        display: none;
+    }
+    .scrollnavsection .scrollnavcontainer .scrollnav-col1 {
+        flex-basis: 20%;
+    }
+    .scrollnavsection .scrollnavcontainer .scrollnav-col2 {
+        flex-basis: 80%;
+    }
+    .scrollnavsection .scrollnavcontainer .scrollnav-col2 .search {
+        width: 100%;
+    }
+    .scrollnavsection .scrollnavcontainer .scrollnav-col3 {
+        flex-basis: 0;
+    }
+    .scrollnavsection .scrollnavcontainer .scrollnav-col3 .scrollnav-login {
+        display: none;
+    }
+    .scrollnavsection .scrollnavcontainer .scrollnav-col3 .scrollnav-login .box-login-logout {
+        display: none;
+    }
+    .scrollnavsection .scrollnavcontainer .scrollnav-col3 .scrollnav-cart {
+        display: none;
+    }
+    /* =======================================================section1============================================================= */
+    .firstcontainer {
+        max-width: 370px;
+        margin: auto;
+    }
+    .firstsection .firstcontainer .text-car .text {
+        font-size: 12px;
+    }
+    /* =======================================================section2============================================================= */
+    .secoundsection {
+        height: 270px
+    }
+    /* ===============row1=============== */
+    .secoundsection .secoundcontainer .row1 .login .snap-login .login-logout {
+        display: none;
+    }
+    /* ===============row2=============== */
+    .secoundsection .secoundcontainer .row2 .hyper-logo .by {
+        display: none;
+    }
+    .secoundsection .secoundcontainer .row2 .chenge-shapping {
+        padding-right: 10px;
+    }
+    .secoundsection .secoundcontainer .row2 .chenge-shapping button {
+        width: 80px!important;
+        height: 20px!important;
+        padding: 4px 8px 3px 5px!important;
+    }
+    .secoundsection .secoundcontainer .row2 {
+        flex-wrap: wrap;
+    }
+    .secoundsection .secoundcontainer .row2 .date {
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .secoundsection .secoundcontainer .row2 {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.185);
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    /* ===============row3=============== */
+    .secoundsection .secoundcontainer .row3 .part {
+        display: none;
+    }
+    .secoundsection .secoundcontainer .row3 .search {
+        flex-basis: 100%;
+    }
+    .secoundsection .secoundcontainer .row3 .search .has-search {
+        width: 100%;
+    }
+    .secoundsection .secoundcontainer .row3 .search .has-search .form-control {
+        padding: 7px 8px 7px 10px;
+    }
+    /* =======================================================section3============================================================= */
+    .thirdsection {
+        display: none;
+    }
+    /* =======================================================section4============================================================= */
+    .owl-carousel {
+        max-width: 340px;
+        margin-right: auto;
+    }
+    .fourthsection .fourthcontainer .sale {
+        display: none!important;
+    }
+    /* =======================================================section box============================================================= */
+    .boxsection {
+        display: none;
+    }
+    /* =======================================================section6============================================================= */
+    .sixthsection .sixthcontainer .hr1 {
+        flex-basis: 30%;
+    }
+    .sixthsection .sixthcontainer .categories {
+        flex-basis: 40%;
+    }
+    .sixthsection .sixthcontainer .hr2 {
+        flex-basis: 30%;
+    }
+    /* =======================================================section7============================================================= */
+    .seventhsection {
+        display: none;
+    }
+    /* =======================================================section8============================================================= */
+    .eighthsection {
+        display: none;
+    }
+    /* =======================================================section13============================================================= */
+    /* ===============row1=============== */
+    .thirteenthsection .thirteenthcontainer .row1 {
+        flex-wrap: wrap;
+    }
+    .thirteenthsection .thirteenthcontainer .row1 .col1 {
+        flex-basis: 100%;
+    }
+    .thirteenthsection .thirteenthcontainer .row1 .col2 {
+        flex-basis: 100%;
+        margin-top: 20px;
+    }
+    /* ===============row2=============== */
+    .thirteenthsection .thirteenthcontainer .row2 .col2 {
+        display: none;
+    }
+    .thirteenthsection .thirteenthcontainer .row2 .col1 {
+        text-align: center;
+        flex-basis: 100%;
+    }
+    .thirteenthsection .thirteenthcontainer .row2 .col1 .available-application {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center
+    }
+    /* ===============row3=============== */
+    .thirteenthsection .thirteenthcontainer .about {
+        display: none;
+    }
+    .thirteenthsection .thirteenthcontainer .row3 {
+        flex-wrap: wrap;
+    }
+    .thirteenthsection .thirteenthcontainer .row3 .logs {
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (min-width: 578px) {
+    /* ======================================================sectionAll============================================================ */
+    .container {
+        max-width: 550px;
+        margin: auto;
+    }
+    /* ======================================================cart section============================================================ */
+    #sidebar {
+        width: 400px
+    }
+    /* =======================================================section1============================================================= */
+    .firstcontainer {
+        max-width: 570px;
+        margin: auto;
+    }
+    .firstsection .firstcontainer .text-car .text {
+        font-size: 12px;
+    }
+    /* =======================================================section2============================================================= */
+    .secoundsection {
+        height: 220px;
+    }
+    /* ===============row1=============== */
+    .secoundsection .secoundcontainer .row1 .login .snap-login .login-logout {
+        display: none;
+    }
+    /* ===============row2=============== */
+    .secoundsection .secoundcontainer .row2 .hyper-logo .by {
+        display: flex;
+    }
+    .secoundsection .secoundcontainer .row2 .chenge-shapping {
+        padding-right: 0!important;
+    }
+    .secoundsection .secoundcontainer .row2 .chenge-shapping button {
+        width: 90px!important;
+        height: 23px!important;
+        padding: 4px 8px 3px 10px!important;
+    }
+    .secoundsection .secoundcontainer .row2 {
+        flex-wrap: wrap;
+    }
+    .secoundsection .secoundcontainer .row2 .date {
+        flex-basis: 40%;
+        flex-wrap: nowrap;
+        display: flex;
+        justify-content: center;
+    }
+    .secoundsection .secoundcontainer .row2 {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.185);
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    .secoundsection .secoundcontainer .row2 .hyper-logo {
+        flex-basis: 55%;
+    }
+    /* ===============row3=============== */
+    .secoundsection .secoundcontainer .row3 .part {
+        display: none;
+    }
+    .secoundsection .secoundcontainer .row3 .search {
+        flex-basis: 100%;
+    }
+    .secoundsection .secoundcontainer .row3 .search .has-search {
+        width: 100%;
+    }
+    .secoundsection .secoundcontainer .row3 .search .has-search .form-control {
+        padding: 10px 8px 10px 10px;
+    }
+    /* =======================================================section3============================================================= */
+    .thirdsection {
+        display: block;
+    }
+    /* =======================================================section4============================================================= */
+    .owl-carousel {
+        max-width: 420px;
+        margin-right: auto;
+    }
+    .fourthsection .fourthcontainer .sale {
+        display: flex!important;
+    }
+    /* =======================================================section box============================================================= */
+    .boxsection {
+        display: flex;
+    }
+    /* =======================================================section6============================================================= */
+    .sixthsection .sixthcontainer .hr1 {
+        flex-basis: 35%;
+    }
+    .sixthsection .sixthcontainer .categories {
+        flex-basis: 30%;
+    }
+    .sixthsection .sixthcontainer .hr2 {
+        flex-basis: 35%;
+    }
+    /* =======================================================section7============================================================= */
+    .seventhsection {
+        display: none;
+    }
+    /* =======================================================section8============================================================= */
+    .eighthsection {
+        display: none;
+    }
+    /* =======================================================section13============================================================= */
+    /* ===============row1=============== */
+    .thirteenthsection .thirteenthcontainer .row1 {
+        flex-wrap: wrap;
+    }
+    .thirteenthsection .thirteenthcontainer .row1 .col1 {
+        flex-basis: 100%;
+    }
+    .thirteenthsection .thirteenthcontainer .row1 .col2 {
+        flex-basis: 100%;
+        margin-top: 20px;
+    }
+    /* ===============row2=============== */
+    .thirteenthsection .thirteenthcontainer .row2 .col2 {
+        display: none;
+    }
+    .thirteenthsection .thirteenthcontainer .row2 .col1 {
+        text-align: center;
+        flex-basis: 100%;
+        justify-content: center
+    }
+    .thirteenthsection .thirteenthcontainer .row2 .col1 .available-application {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    /* ===============row3=============== */
+    .thirteenthsection .thirteenthcontainer .about {
+        display: flex;
+    }
+    .thirteenthsection .thirteenthcontainer .row3 {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    /* ======================================================sectionAll============================================================ */
+    .container {
+        max-width: 730px;
+        margin: auto;
+    }
+    /* ==================================================scrollnav section========================================================= */
+    .scrollnavsection .scrollnavcontainer .scrollnav-col1 .scrollnav-loc {
+        display: none;
+    }
+    .scrollnavsection .scrollnavcontainer .scrollnav-col1 .scrollnav-buy {
+        display: flex;
+        flex-basis: 80%;
+    }
+    .scrollnavsection .scrollnavcontainer .scrollnav-col1 .scrollnav-buy .by {
+        display: none;
+    }
+    .scrollnavsection .scrollnavcontainer .scrollnav-col1 {
+        flex-basis: 40%;
+    }
+    .scrollnavsection .scrollnavcontainer .scrollnav-col2 {
+        flex-basis: 30%;
+    }
+    .scrollnavsection .scrollnavcontainer .scrollnav-col2 .search {
+        width: 100%;
+    }
+    .scrollnavsection .scrollnavcontainer .scrollnav-col3 {
+        flex-basis: 30%;
+    }
+    .scrollnavsection .scrollnavcontainer .scrollnav-col3 .scrollnav-login {
+        display: flex;
+    }
+    .scrollnavsection .scrollnavcontainer .scrollnav-col3 .scrollnav-cart {
+        display: flex;
+        flex-basis: 50%;
+    }
+    /* =======================================================section1============================================================= */
+    .firstcontainer {
+        max-width: 760px;
+        margin: auto;
+    }
+    .firstsection .firstcontainer .text-car .text {
+        font-size: 18px;
+    }
+    /* =======================================================section2============================================================= */
+    /* ===============row1=============== */
+    .secoundsection .secoundcontainer .row1 .login .snap-cart {
+        display: flex;
+    }
+    .secoundsection .secoundcontainer .row1 .login .snap-login .login-logout {
+        display: flex;
+    }
+    /* ===============row2=============== */
+    .secoundsection .secoundcontainer .row2 {
+        flex-wrap: nowrap;
+    }
+    .secoundsection .secoundcontainer .row2 .hyper-logo {
+        flex-basis: 40%;
+    }
+    .secoundsection .secoundcontainer .row2 {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 20px;
+    }
+    /* ===============row3=============== */
+    .secoundsection .secoundcontainer .row3 .part {
+        display: flex;
+    }
+    .secoundsection .secoundcontainer .row3 .search .has-search {
+        width: 350px;
+    }
+    /* =======================================================section4============================================================= */
+    .owl-carousel {
+        max-width: 600px;
+        margin-right: auto;
+    }
+    .fourthcontainer .fourthcontainer .sale {
+        display: flex;
+    }
+    /* =======================================================section6============================================================= */
+    .sixthsection .sixthcontainer .hr1 {
+        flex-basis: 40%;
+    }
+    .sixthsection .sixthcontainer .categories {
+        flex-basis: 20%;
+    }
+    .sixthsection .sixthcontainer .hr2 {
+        flex-basis: 40%;
+    }
+    /* =======================================================section7============================================================= */
+    .seventhsection {
+        display: flex;
+    }
+    .seventhsection .seventhcontainer .shoyande .box-shoyande {
+        width: 230px;
+        height: 161px;
+    }
+    .seventhsection .seventhcontainer .labaniyat .box-labaniyat {
+        width: 230px;
+        height: 161px;
+    }
+    .seventhsection .seventhcontainer .berd .box-berd {
+        width: 230px;
+        height: 161px;
+    }
+    /* =======================================================section8============================================================= */
+    .eighthsection {
+        display: block;
+    }
+    .eighthsection .eighthcontainer .sanitary {
+        flex-basis: 23%;
+        width: 172px;
+    }
+    .eighthsection .eighthcontainer .fruit {
+        flex-basis: 23%;
+        width: 172px;
+    }
+    .eighthsection .eighthcontainer .drink {
+        flex-basis: 23%;
+        width: 172px;
+    }
+    .eighthsection .eighthcontainer .protein {
+        flex-basis: 23%;
+        width: 172px;
+    }
+    /* =======================================================section13============================================================= */
+    /* ===============row1=============== */
+    .thirteenthsection .thirteenthcontainer .row1 {
+        flex-wrap: nowrap;
+    }
+    .thirteenthsection .thirteenthcontainer .row1 .col1 {
+        flex-basis: 50%;
+    }
+    .thirteenthsection .thirteenthcontainer .row1 .col2 {
+        flex-basis: 50%;
+        margin-top: 0;
+    }
+    /* ===============row2=============== */
+    .thirteenthsection .thirteenthcontainer .row2 .col2 {
+        display: flex;
+    }
+    .thirteenthsection .thirteenthcontainer .row2 .col1 {
+        text-align: right;
+        flex-basis: 60%;
+    }
+    .thirteenthsection .thirteenthcontainer .row2 .col1 .available-application {
+        flex-wrap: nowrap;
+        justify-content: start;
+        align-items: center
+    }
+    /* ===============row3=============== */
+    .thirteenthsection .thirteenthcontainer .row3 {
+        flex-wrap: nowrap;
+    }
+    .thirteenthsection .thirteenthcontainer .row3 .logs {
+        flex-basis: 30%;
+    }
+}
+
+@media (min-width: 992px) {
+    /* ======================================================sectionAll============================================================ */
+    .container {
+        max-width: 960px;
+        margin: auto;
+    }
+    /* ==================================================scrollnav section========================================================= */
+    .scrollnavsection .scrollnavcontainer .scrollnav-col1 .scrollnav-buy .by {
+        display: none;
+    }
+    .scrollnavsection .scrollnavcontainer .scrollnav-col3 .scrollnav-login .box-login-logout {
+        display: flex;
+    }
+    /* =======================================================section1============================================================= */
+    .firstcontainer {
+        max-width: 990px;
+        margin: auto;
+    }
+    /* =======================================================section2============================================================= */
+    /* ===============row1=============== */
+    /* ===============row2=============== */
+    .secoundsection .secoundcontainer .row2 .hyper-logo {
+        flex-basis: 30%;
+    }
+    /* =======================================================section4============================================================= */
+    .owl-carousel {
+        max-width: 840px;
+        margin-right: auto;
+    }
+    /* =======================================================section7============================================================= */
+    .seventhsection .seventhcontainer .shoyande .box-shoyande {
+        width: 309px;
+        height: 161px;
+    }
+    .seventhsection .seventhcontainer .labaniyat .box-labaniyat {
+        width: 309px;
+        height: 161px;
+    }
+    .seventhsection .seventhcontainer .berd .box-berd {
+        width: 309px;
+        height: 161px;
+    }
+    /* =======================================================section8============================================================= */
+    .eighthsection .eighthcontainer .sanitary {
+        flex-basis: 24%;
+    }
+    .eighthsection .eighthcontainer .fruit {
+        flex-basis: 24%;
+    }
+    .eighthsection .eighthcontainer .drink {
+        flex-basis: 24%;
+    }
+    .eighthsection .eighthcontainer .protein {
+        flex-basis: 24%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    /* ======================================================sectionAll============================================================ */
+    .container {
+        max-width: 1220px;
+        margin: auto;
+    }
+    /* ==================================================scrollnav section========================================================= */
+    .scrollnavsection .scrollnavcontainer .scrollnav-col1 .scrollnav-loc {
+        display: flex;
+    }
+    .scrollnavsection .scrollnavcontainer .scrollnav-col1 .scrollnav-buy .by {
+        display: flex;
+    }
+    /* =======================================================section1============================================================= */
+    .firstcontainer {
+        max-width: 1250px;
+        margin: auto;
+    }
+    /* =======================================================section2============================================================= */
+    /* ===============row1=============== */
+    /* ===============row2=============== */
+    .secoundsection .secoundcontainer .row2 .hyper-logo {
+        flex-basis: 25%;
+    }
+    /* =======================================================section4============================================================= */
+    .owl-carousel {
+        max-width: 1080px;
+        margin-right: auto;
+    }
+    /* =======================================================section7============================================================= */
+    .seventhsection .seventhcontainer .shoyande .box-shoyande {
+        width: 395px;
+        height: 161px;
+    }
+    .seventhsection .seventhcontainer .labaniyat .box-labaniyat {
+        width: 395px;
+        height: 161px;
+    }
+    .seventhsection .seventhcontainer .berd .box-berd {
+        width: 395px;
+        height: 161px;
+    }
+    /* =======================================================section8============================================================= */
+    .eighthsection .eighthcontainer .protein {
+        display: flex;
+    }
+    .eighthsection .eighthcontainer .sanitary {
+        flex-basis: 25%;
+        width: 290px;
+    }
+    .eighthsection .eighthcontainer .fruit {
+        flex-basis: 25%;
+        width: 290px;
+    }
+    .eighthsection .eighthcontainer .drink {
+        flex-basis: 25%;
+        width: 290px;
+    }
+    .eighthsection .eighthcontainer .protein {
+        flex-basis: 25%;
+        width: 290px;
+    }
+}

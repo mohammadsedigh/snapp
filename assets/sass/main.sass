@@ -1,0 +1,1338 @@
+$xs-size: 12px
+$sm-size: 14px
+$md-size: 16px
+$lg-size: 18px
+$xl-size: 20px
+$xxl-size: 30px
+$font-xs: 12px
+$font-sm: 14px
+$font-md: 16px
+$font-lg: 18px
+$font-xl: 20px
+$font-black: #000
+$font-white: #fff
+$font-gray: #30354B
+$font-darkgray: #30354BBD
+$font-lightgray: #757575
+$font-blue: #2446F5
+$font-green: #43CB4E
+$radius-xs: 5px
+$radius-circle: 50px
+$font-weight-bold: 900
+
+*
+    direction: rtl
+    box-sizing: border-box
+    font-family: iransans
+    // border: 1px solid blue
+    // margin: 2px 
+    // padding: 2px
+
+@font-face
+    font-family: "iransans"
+    src: url('../font/IRANSansWeb\(FaNum\).woff2')
+
+    // =================================*mixin*==================================//
+@mixin felex-between
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+@mixin felex-start
+    display: flex
+    justify-content: start
+    align-items: center
+
+@mixin felex-center
+    display: flex
+    justify-content: center
+    align-items: center
+
+@mixin felex-end
+    display: flex
+    justify-content: flex-end
+    align-items: center
+
+@mixin felex-align-items-center
+    display: flex
+    align-items: center
+
+@mixin font-xs-white
+    font-size: $font-xs
+    color: $font-white
+
+// @mixin font-xs-white
+//     font-size: $font-xs
+//     color: #757575
+
+@mixin font-sm-white
+    font-size: $font-sm
+    color: $font-white
+
+@mixin font-sm-blue
+    font-size: 10px
+    color: $font-blue
+
+// @mixin font-md
+//     font-size: $font-md
+
+// @mixin font-lg-black
+//     font-size: $font-lg
+//     color: $font-black
+
+// @mixin font-xl-black
+//     font-size: $font-lx
+//     color: $font-black
+
+    // =================================*general*==================================//
+
+::-webkit-scrollbar
+    width: 10px
+
+::-webkit-scrollbar-track
+    box-shadow: inset 0 0 5px grey
+
+::-webkit-scrollbar-thumb
+    background-color: #00000039
+    border-radius: 5px
+
+::-webkit-scrollbar-thumb:hover
+    background: #00000066
+
+html,
+body
+    width: 100%
+    margin: 0
+    background-color: #fafafa
+    position: relative
+
+section
+    width: 100%
+
+main
+    width: 100%
+
+    // =================================*cart section*==================================//
+#sidebar
+    position: fixed
+    width: 400px
+    height: 100%
+    background-color: #fff
+    right: -400px
+    transition: 0.4s
+    z-index: 1000000
+    .colse-cart
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 45px
+        color: #000
+        font-size: 14px
+        border-bottom: 1px solid #00000002
+        margin: 0 8px
+        .cart
+            flex-basis: 30%
+            margin-left: 8px
+        .product-selected
+            flex-basis: 10%
+            span
+                font-size: $font-xs
+        .colse
+            flex-basis: 60%
+            display: flex
+            justify-content: flex-end
+            font-size: 24px
+            button
+                background-color: #fff
+                border: none
+                cursor: pointer
+    .delivery
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 80px
+        box-shadow: rgba(0, 0, 0, 0.153) 0px 8px 20px -5px
+        .car
+            width: 44px
+            img
+                width: 100%
+        .text
+            color: #07bc20
+            font-size: 12px
+            margin-right: 10px
+
+#main-sidebar.active-cart
+    position: fixed
+    width: 100%
+    height: 100%
+    z-index: 1000
+    background-color: #000
+    opacity: 0.3
+
+#sidebar.active
+    right: 0
+
+.product-cart
+    width: 100%
+    height: calc(100% - 230px)
+    overflow: auto
+    .product
+        width: 100%
+        height: 100px
+        @include felex-between
+        border-bottom: 1px solid #0000000c
+        margin-top: 8px
+        padding: 16px 16px 16px 16px
+        cursor: pointer
+        .img-product
+            flex-basis: 20%
+            @include felex-center
+            .img-box
+                width: 70px
+                height: 70px
+                @include felex-center
+                img
+                    width: 100%
+        .text-product
+            flex-basis: 80%
+            @include felex-start
+            align-items: flex-start
+            flex-direction: column
+            padding-right: 16px
+            .text
+                height: 34px
+                font-size: 13px
+                color: #202332
+            .data
+                width: 100%
+                height: 54px
+                @include felex-between
+                .sale-price
+                    flex-basis: 60%
+                    @include felex-start
+                    align-items: flex-start
+                    flex-direction: column
+                    .sale
+                        height: 25px
+                        label
+                            width: 25px
+                            height: 25px
+                            background-color: #fa0f1b
+                            font-size: $font-md
+                            color: #fff
+                            border: 1px solid #ff7f87
+                            border-radius: $radius-xs
+                            padding: 0 4px
+                        small
+                            font-size: $font-xs
+                            color: #30354b66
+                            text-decoration: line-through
+                            padding-right: 4px
+                    .price
+                        height: 25px
+                        @include felex-start
+                        strong
+                            font-size: $font-md
+                            color: #30354b
+                        small
+                            font-size: $font-xs
+                            color: #30354bbd
+                            padding-right: 4px
+                .remove-add
+                    flex-basis: 40%
+                    @include felex-start
+                    .remove
+                        margin-left: 30px 
+                        button
+                            width: 32px
+                            height: 32px
+                            background-color: #fff
+                            border: 1px solid #0000000c
+                            border-radius: $radius-circle
+                            svg
+                                width: 100%
+                        button:hover
+                            background-color: #2446F5
+                            svg
+                                fill: #fff
+                    .qty
+                        font-size: $font-xl
+                        color: #2446F5
+
+.total-login
+    width: 100%
+    height: 106px
+    @include felex-center
+    flex-direction: column
+    border-top: 1px solid #0000000c
+    padding: 8px
+    .total
+        @include felex-center
+        width: 100%
+        height: 36px
+        background-color: #f2f7ff
+        border-radius: $radius-xs
+        padding: 7px 7px 6px
+        margin: 0 0 8px
+        span
+            font-size: 14px
+            color: rgb(36, 70, 245)
+    .login
+        @include felex-center
+        width: 100%
+        height: 45px
+        background-color: #07bc20
+        border-radius: $radius-xs
+        padding: 0px 13px 0px 10px
+        cursor: pointer
+        button
+            background-color: #07bc20
+            border: none
+            cursor: pointer
+            span
+                font-size: 18px
+                color: #fff
+    .login:hover
+        opacity: 0.9
+
+.scrollBady-none
+    overflow: hidden
+
+    // =================================*scrollnav section*==================================//
+.scrollnavsection
+    display: none
+    position: fixed
+    background-image: url("../images/img-header.jpg")
+    background-size: cover
+    background-position: 0% 66%
+    width: 100%
+    height: 68px
+    padding-top: 5px
+    z-index: 2000
+    .scrollnavcontainer
+        @include felex-center
+        .scrollnav-col1
+            flex-basis: 40%
+            @include felex-start
+            .scrollnav-icon
+                flex-basis: 20%
+                .box-img
+                    @include felex-center
+                    width: 57px
+                    height: 57px
+                    cursor: pointer
+                    img
+                        width: 100%
+            .scrollnav-loc
+                flex-basis: 30%
+                @include felex-center  
+                cursor: pointer
+                .loc-size
+                        width: 12px
+                        height: 12px
+                        margin: 0 8px 0 8px
+                        img
+                            width: 100%
+                .text-loc
+                    @include font-xs-white
+                .icon-size
+                    width: 12px
+                    height: 12px
+                    margin: 0 8px 0 8px
+                    img
+                        width: 100%
+            .scrollnav-loc:hover
+                opacity: 0.5
+            .scrollnav-buy
+                flex-basis: 50%
+                @include felex-center
+                cursor: pointer
+                .logo
+                    flex-basis: 20%
+                    @include felex-center
+                    .box-img
+                        width: 33px
+                        height: 33px
+                        img
+                            width: 100%
+                            border-radius: $radius-circle
+                .by
+                    flex-basis: 15%
+                    @include felex-start
+                    p
+                        @include font-sm-white
+                .shapping
+                    flex-basis: 25%
+                    @include felex-start
+                    margin-right: 8px
+                    p
+                        @include font-sm-white
+                        font-weight: $font-weight-bold
+            .scrollnav-buy:hover
+                opacity: 0.5
+        .scrollnav-col2
+            flex-basis: 30%
+            .search
+                @include felex-start
+                .has-search
+                    @include felex-start
+                    background-color: $font-white
+                    border-radius: $radius-circle
+                    .search-icon
+                        padding-right: $xl-size
+                        color: #ccc
+                        img
+                            width: 13px
+                            height: 13px
+                .has-search
+                    width: 90%
+                    .form-control
+                        padding: 8px 8px 8px 10px
+                        outline: none
+                        border: none
+                        border-radius: $radius-circle
+        .scrollnav-col3
+            flex-basis: 30%
+            @include felex-center   
+            .scrollnav-login
+                flex-basis: 50%
+                @include felex-end
+                cursor: pointer
+                .person
+                    width: 18px
+                    height: 18px
+                    margin: 0 0 0 10px
+                    img
+                        width: 100%
+                .box-login-logout
+                    flex-basis: 80%
+                    p
+                        color: $font-white
+            .scrollnav-login:hover
+                opacity: 0.5
+            .scrollnav-cart
+                flex-basis: 50%
+                @include felex-end
+                .scroll-cart
+                    .button-cart
+                        @include felex-between
+                        width: 135px
+                        height: 35px
+                        background-color: $font-white
+                        color: $font-blue
+                        border: none
+                        border-radius: $radius-xs
+                        padding: 17px 15px
+                        cursor: pointer
+                        .icon-bag
+                            width: $xl-size
+                            height: $xl-size
+                            img
+                                width: 100%
+                        .price-cart
+                            width: 23px
+                            background: #f2f7ff
+                            border-radius: $radius-circle
+                            p
+                                text-align: center
+                            p
+                                font-weight: $font-weight-bold
+
+
+    // =============================*modal section*==============================//
+.modal
+    width: 100% 
+    height: 100% 
+    position: fixed 
+    top: 0 
+    left: 0
+    right: 0 
+    bottom: 0 
+    z-index: 111111111 
+    background: rgba(0,0,0,0.5) 
+    display: none 
+    justify-content: center
+    align-items: center
+    .modal-content
+        width: 480px
+        height: 285px 
+        background: #fff
+        padding: 10px
+        border-radius: $radius-xs
+        header
+            width: 100%
+            height: 24px
+            @include felex-between
+            padding: 16px
+            margin-bottom: 10px
+            .close
+                font-size: 30px
+                color: rgb(117, 117, 117)
+                cursor: pointer
+        .modal-body
+            @include felex-center
+            flex-direction: column
+            .section-code
+                width: 100% 
+                height: 63px
+                @include felex-center
+                .code
+                    font-size: 14px
+                    color: #757575
+            .section-number
+                width: 318px
+                height: 150px
+                display: block
+                align-items: start
+                flex-direction: column
+                .text
+                    @include felex-start
+                    p
+                        font-size: 14px
+                        color: #757575
+                    span
+                        color: red
+                .input-number
+                    .form-control
+                        width: 100%
+                        height: 40px
+                        outline: none
+                        border: 1px solid #0000003d
+                        border-radius: $radius-xs
+                .submit
+                    margin-top: 10px
+                    button
+                        width: 100%
+                        height: 40px
+                        background-color: rgb(36, 70, 245)
+                        color: #fff
+                        border: none
+                        border-radius: $radius-xs
+                    button:hover
+                        opacity: 0.9
+
+            
+
+
+    // =================================*section1*==================================//
+.firstsection
+    background-color: rgb(0,0,0)
+    height: 85px
+    padding-top: 10px
+    .firstcontainer
+        @include felex-center
+        background-color: rgb(255, 186, 8)
+        height: 66px
+        border-radius: $radius-xs
+        .text-car
+            flex-basis: 90%
+            @include felex-center
+            img
+                height: 60px
+            .text
+                @include felex-center
+                font-weight: $font-weight-bold
+                color: $font-black
+                padding: 0 16px 0 0
+        .close
+            flex-basis: 7%
+            @include felex-end
+            button
+                width: 45px
+                height: 45px
+                background: none
+                border: none
+                img
+                    width: 50%
+
+.removeFirstsection
+    display: none
+
+    // =================================*section2*==================================//
+.secoundsection
+    background-image: url("../images/img-header.jpg")
+    background-size: cover
+    height: 200px
+    margin-bottom: $xxl-size
+    z-index: 3000
+    .secoundcontainer
+        .row1
+            @include felex-between
+            border-bottom: 1px solid rgba(255, 255, 255, 0.185)
+            margin-bottom: $xl-size
+            .snap-logo
+                flex-basis: 25%
+                @include felex-start
+                .logo
+                    flex-basis: 20%
+                    @include felex-start
+                    .box-img
+                        @include felex-center
+                        width: 57px
+                        height: 57px
+                        cursor: pointer
+                        img
+                            width: 100%
+                .snap-loc
+                    flex-basis: 80%
+                    @include felex-center
+                    padding: 8px
+                    cursor: pointer  
+                    .loc-size
+                        width: 12px
+                        height: 12px
+                        margin: 0 8px 0 8px
+                        img
+                            width: 100%
+                    .text-loc
+                        @include font-xs-white
+                    .icon-size
+                        width: 12px
+                        height: 12px
+                        margin: 0 8px 0 8px
+                        img
+                            width: 100%
+                .snap-loc:hover
+                    opacity: 0.5  
+            .login
+                flex-basis: 75%
+                @include felex-end
+                .snap-login
+                    flex-basis: 25%
+                    @include felex-end
+                    cursor: pointer
+                    .person
+                        width: 18px
+                        height: 18px
+                        margin: 0 0 0 10px
+                        img
+                            width: 100%
+                    p
+                        color: $font-white
+                .snap-login:hover
+                    opacity: 0.5
+                .snap-cart
+                    flex-basis: 20%
+                    @include felex-end
+                    .button-cart
+                        @include felex-between
+                        width: 135px
+                        height: 35px
+                        background-color: $font-white
+                        color: $font-blue
+                        border: none
+                        border-radius: $radius-xs
+                        padding: 17px 15px
+                        cursor: pointer
+                        .icon-bag
+                            width: $xl-size
+                            height: $xl-size
+                            img
+                                width: 100%
+                        .price-cart
+                            width: 23px
+                            background: #f2f7ff
+                            border-radius: $radius-circle
+                            p
+                                text-align: center
+                            p
+                                font-weight: $font-weight-bold
+        .row2
+            @include felex-between
+            .hyper-logo
+                flex-basis: 25%
+                @include felex-start
+                .logo
+                    flex-basis: 20%
+                    @include felex-start
+                    .box-img
+                        width: 54px
+                        height: 54px
+                        img
+                            width: 100%
+                            border-radius: $radius-circle
+                .by
+                    flex-basis: 15%
+                    @include felex-start
+                    p
+                        @include font-sm-white
+                .shapping
+                    flex-basis: 25%
+                    @include felex-start
+                    margin-right: 8px
+                    p
+                        @include font-sm-white
+                        font-weight: $font-weight-bold
+                .chenge-shapping
+                    flex-basis: 40%
+                    @include felex-center
+                    button
+                        width: 90px
+                        height: 23px
+                        @include font-sm-blue
+                        @include felex-center
+                        background-color: $font-white
+                        border: none
+                        border-radius: $radius-circle
+                        padding: 4px 8px 3px 10px
+                        cursor: pointer
+                        .box-chenge-shapping
+                            width: 89px
+                            height: 23px
+                            @include felex-start
+                            .icon-arrow-down
+                                width: 10px
+                                height: 10px
+            .date
+                flex-basis: 40%
+                @include felex-center
+                .icon-clock
+                    width: 18px
+                    height: 18px
+                    margin-left: 5px
+                    img
+                        width: 100%
+                p
+                    font-size: $font-xs
+                    color: $font-white
+        .row3
+            @include felex-between
+            .part
+                flex-basis: 10%
+                @include felex-start
+                button
+                    @include felex-center
+                    width: 125px
+                    height: 40px
+                    background: $font-white
+                    border: none
+                    border-radius: $radius-xs
+                    padding: 0 10px
+                    margin-left: 10px
+                    cursor: pointer
+                    .grid
+                        @include felex-center
+                        .grid-icon
+                            width: 13px
+                            height: 13px
+                            margin-left: 8px
+                            img
+                                width: 100%
+                        p
+                            color: $font-gray
+            .search
+                flex-basis: 90%
+                @include felex-start
+                .has-search
+                    @include felex-start
+                    background-color: $font-white
+                    border-radius: $radius-circle
+                    .search-icon
+                        padding-right: $xl-size
+                        color: #ccc
+                        img
+                            width: 13px
+                            height: 13px
+                .has-search
+                    .form-control
+                        padding: 10px 8px 10px 10px
+                        outline: none
+                        border: none
+                        border-radius: $radius-circle
+
+    // =================================*section3*==================================//
+.thirdsection
+    margin-bottom: $xl-size
+    .thirdcontainer
+        img
+            width: 100%!important
+            border-radius: $radius-xs
+
+    // =================================*section4*==================================//
+.fourthsection
+    margin-bottom: $xl-size
+    .fourthcontainer
+        background-color: red
+
+    // ==============================*section box-img*==============================//
+.boxsection
+    margin-bottom: $xxl-size
+    .boxcontainer
+        img
+            width: 100%
+            border-radius: $radius-xs
+
+    // =================================*section6*==================================//
+.sixthsection
+    margin-bottom: $xl-size
+    .sixthcontainer
+        @include felex-between
+        .hr1
+            flex-basis: 45%
+            @include felex-center
+            border-bottom: 1px solid rgba(0, 0, 0, 0.105)
+        .categories
+            flex-basis: 15%
+            @include felex-center
+            font-size: $font-xl
+            font-weight: 900
+        .hr2
+            flex-basis: 45%
+            @include felex-center
+            border-bottom: 1px solid rgba(0, 0, 0, 0.105)
+
+    // =================================*section7*==================================//
+.seventhsection
+    .seventhcontainer
+        @include felex-between
+        .shoyande
+            flex-basis: 33%
+            @include felex-start
+            .box-shoyande
+                @include felex-start
+                background-color: #ffCB9645
+                border: 1px solid rgb(253 223 192)
+                padding: 4px 0 4px 24px
+                margin: 8px
+                border-radius: $radius-xs
+                cursor: pointer
+                .img-shoyande
+                    flex-basis: 40%
+                    @include felex-center
+                    width: 150px
+                    img
+                        width: 100%
+                .text
+                    flex-basis: 50%
+                    @include felex-start
+                    align-items: flex-start
+                    flex-direction: column
+                    font-size: $font-lg
+                    color: #424242
+                    font-weight: 700
+                    .text-takhfif
+                        @include felex-center
+                        justify-content: space-evenly
+                        font-size: $font-sm
+                        color: $font-white
+                        margin-top: $xl-size
+                        transform: skew(-10deg)
+                        background-color: $font-green
+                        border-radius: $radius-xs
+                        width: 120px
+                        height: $xxl-size
+                        margin: 17px 0 0
+                        padding: 0 9px
+                .arrow-icon
+                    flex-basis: 10%
+                    @include felex-end
+                    img
+                        width: 31px
+                        height: 18px
+        .labaniyat
+            flex-basis: 33%
+            @include felex-start
+            .box-labaniyat
+                @include felex-start
+                background-color: #ffCB9645
+                border: 1px solid rgb(253 223 192)
+                padding: 4px 0 4px 24px
+                margin: 8px
+                border-radius: $radius-xs
+                cursor: pointer
+                .img-labaniyat
+                    flex-basis: 40%
+                    @include felex-center
+                    width: 150px
+                    img
+                        width: 100%
+                .text
+                    flex-basis: 50%
+                    @include felex-start
+                    align-items: flex-start
+                    flex-direction: column
+                    font-size: $font-lg
+                    color: #424242
+                    font-weight: 700
+                    .text-takhfif
+                        @include felex-center
+                        justify-content: space-evenly
+                        font-size: $font-sm
+                        color: $font-white
+                        margin-top: $xl-size
+                        transform: skew(-10deg)
+                        background-color: $font-green
+                        border-radius: $radius-xs
+                        width: 120px
+                        height: $xxl-size
+                        margin: 17px 0 0
+                        padding: 0 9px
+                .arrow-icon
+                    flex-basis: 10%
+                    @include felex-end
+                    img
+                        width: 31px
+                        height: 18px
+        .berd
+            flex-basis: 33%
+            @include felex-start
+            .box-berd
+                @include felex-start
+                background-color: #ffCB9645
+                border: 1px solid rgb(253 223 192)
+                padding: 4px 0 4px 24px
+                margin: 8px
+                border-radius: $radius-xs
+                cursor: pointer
+                .img-berd
+                    flex-basis: 40%
+                    @include felex-center
+                    width: 150px
+                    img
+                        width: 100%
+                .text
+                    flex-basis: 50%
+                    @include felex-start
+                    align-items: flex-start
+                    flex-direction: column
+                    font-size: $font-lg
+                    color: #424242
+                    font-weight: 700
+                    .text-takhfif
+                        @include felex-center
+                        justify-content: space-evenly
+                        font-size: $font-sm
+                        color: $font-white
+                        margin-top: $xl-size
+                        transform: skew(-10deg)
+                        background-color: $font-green
+                        border-radius: $radius-xs
+                        width: 120px
+                        height: $xxl-size
+                        margin: 17px 0 0
+                        padding: 0 9px
+                .arrow-icon
+                    flex-basis: 10%
+                    @include felex-end
+                    img
+                        width: 31px
+                        height: 18px
+
+    // =================================*section8*==================================//
+.eighthsection
+    .eighthcontainer
+        @include felex-between
+        .sanitary
+            flex-basis: 25%
+            @include felex-center
+            .box-sanitary
+                @include felex-start
+                background-color: $font-white
+                border: 1px solid #e8e8e8
+                width: 100%
+                padding: 4px 0 4px 4px
+                margin: 8px
+                border-radius: $radius-xs
+                cursor: pointer
+                .img-sanitary
+                    flex-basis: 40%
+                    @include felex-center
+                    width: 150px
+                    img
+                        width: 100%
+                .text
+                    flex-basis: 60%
+                    @include felex-center
+                    align-items: flex-start
+                    flex-direction: column
+                    font-size: $font-md
+                    color: #424242
+                    font-weight: 500
+                    .text-takhfif
+                        @include felex-center
+                        justify-content: space-evenly
+                        font-size: $font-sm
+                        color: $font-green
+                        margin-top: $xl-size
+                        transform: skew(-10deg)
+                        background-color: #f3fcf4
+                        border-radius: $radius-xs
+                        width: 120px
+                        height: $xxl-size
+                    //    margin: 17px 0 0
+                    //    padding: 0 9px
+                .arrow-icon
+                    flex-basis: 10%
+                    @include felex-end
+                    img
+                        width: 31px
+                        height: 18px
+        .fruit
+            flex-basis: 25%
+            @include felex-center
+            .box-fruit
+                @include felex-start
+                background-color: $font-white
+                border: 1px solid #e8e8e8
+                width: 100%
+                padding: 4px 0 4px 4px
+                margin: 8px
+                border-radius: $radius-xs
+                cursor: pointer
+                .img-fruit
+                    flex-basis: 40%
+                    @include felex-center
+                    width: 150px
+                    img
+                        width: 100%
+                .text
+                    flex-basis: 60%
+                    @include felex-center
+                    align-items: flex-start
+                    flex-direction: column
+                    font-size: $font-md
+                    color: #424242
+                    font-weight: 500
+                    .text-takhfif
+                        @include felex-center
+                        justify-content: space-evenly
+                        font-size: $font-sm
+                        color: $font-green
+                        margin-top: $xl-size
+                        transform: skew(-10deg)
+                        background-color: #f3fcf4
+                        border-radius: $radius-xs
+                        width: 120px
+                        height: $xxl-size
+                    //    margin: 17px 0 0
+                    //    padding: 0 9px
+                .arrow-icon
+                    flex-basis: 10%
+                    @include felex-end
+                    img
+                        width: 31px
+                        height: 18px
+        .drink
+            flex-basis: 25%
+            @include felex-center
+            .box-drink
+                @include felex-start
+                background-color: $font-white
+                border: 1px solid #e8e8e8
+                width: 100%
+                padding: 4px 0 4px 4px
+                margin: 8px
+                border-radius: $radius-xs
+                cursor: pointer
+                .img-drink
+                    flex-basis: 40%
+                    @include felex-center
+                    width: 150px
+                    img
+                        width: 100%
+                .text
+                    flex-basis: 60%
+                    @include felex-center
+                    align-items: flex-start
+                    flex-direction: column
+                    font-size: $font-md
+                    color: #424242
+                    font-weight: 500
+                    .text-takhfif
+                        @include felex-center
+                        justify-content: space-evenly
+                        font-size: $font-sm
+                        color: $font-green
+                        margin-top: $xl-size
+                        transform: skew(-10deg)
+                        background-color: #f3fcf4
+                        border-radius: $radius-xs
+                        width: 120px
+                        height: $xxl-size
+                .arrow-icon
+                    flex-basis: 10%
+                    @include felex-end
+                    img
+                        width: 31px
+                        height: 18px
+        .protein
+            flex-basis: 25%
+            @include felex-center
+            .box-protein
+                @include felex-start
+                background-color: $font-white
+                border: 1px solid #e8e8e8
+                width: 100%
+                padding: 4px 0 4px 4px
+                margin: 8px
+                border-radius: $radius-xs
+                cursor: pointer
+                .img-protein
+                    flex-basis: 40%
+                    @include felex-center
+                    width: 150px
+                    img
+                        width: 100%
+                .text
+                    flex-basis: 60%
+                    @include felex-center
+                    align-items: flex-start
+                    flex-direction: column
+                    font-size: $font-md
+                    color: #424242
+                    font-weight: 500
+                    .text-takhfif
+                        @include felex-center
+                        justify-content: space-evenly
+                        font-size: $font-sm
+                        color: $font-green
+                        margin-top: $xl-size
+                        transform: skew(-10deg)
+                        background-color: #f3fcf4
+                        border-radius: $radius-xs
+                        width: 120px
+                        height: $xxl-size
+                    //    margin: 17px 0 0
+                    //    padding: 0 9px
+                .arrow-icon
+                    flex-basis: 10%
+                    @include felex-end
+                    img
+                        width: 31px
+                        height: 18px
+
+    // =================================*section9*==================================//
+.ninthsection
+    margin-top: $xxl-size
+    margin-bottom: $xl-size
+    .ninthcontainer
+        @include felex-center
+        text-align: center
+        cursor: pointer
+        .categories-more
+            span
+                font-size: $font-sm
+                color: #757575
+        .double-arrow-icon
+            width: 15px
+            height: 15px
+            text-align: center
+            margin: auto
+            img
+                width: 50%
+
+    // =================================*section10*==================================//
+.tenthsection
+    margin-bottom: $xl-size
+    .tenthcontainer
+        background-color: red
+
+    // =================================*section11*==================================//
+.eleventhsection
+    margin-bottom: $xl-size
+    .eleventhcontainer
+        background-color: red
+
+    // =================================*section12*==================================//
+.twelfthsection
+    margin-bottom: 40px
+    .twelfthcontainer
+        background-color: $font-white
+        border: 1px solid #00000017
+        border-radius: $radius-xs
+        padding: $xl-size 14px
+        h1
+            color: $font-lightgray
+            margin-top: 8px
+        p
+            color: $font-lightgray
+
+    // =================================*section13*==================================//
+.thirteenthsection
+    background-color: $font-white
+    padding-top: $xxl-size
+    .thirteenthcontainer
+        .row1
+            @include felex-between
+            align-items: stretch
+            .col1
+                @include felex-between
+                flex-basis: 50%
+                align-items: stretch
+                .discount
+                    flex-basis: 50%
+                    @include felex-center
+                    flex-direction: column
+                    text-align: center
+                    .discount-icon
+                        width: 65px
+                        height: 65px
+                        @include felex-center
+                        border: 1px solid #00000017
+                        border-radius: $radius-xs
+                        img
+                            width: 50%
+                .sendorder
+                    flex-basis: 50%
+                    @include felex-center
+                    flex-direction: column
+                    text-align: center
+                    .sendorder-icon
+                        width: 65px
+                        height: 65px
+                        @include felex-center
+                        border: 1px solid #00000017
+                        border-radius: $radius-xs
+                        img
+                            width: 50%
+            .col2
+                @include felex-between
+                flex-basis: 50%
+                align-items: stretch
+                .sendgoods
+                    flex-basis: 50%
+                    @include felex-center
+                    flex-direction: column
+                    text-align: center
+                    .sendgoods-icon
+                        width: 65px
+                        height: 65px
+                        @include felex-center
+                        border: 1px solid #00000017
+                        border-radius: $radius-xs
+                        img
+                            width: 50%
+                .packing
+                    flex-basis: 50%
+                    @include felex-center
+                    flex-direction: column
+                    text-align: center
+                    .packing-icon
+                        width: 65px
+                        height: 65px
+                        @include felex-center
+                        border: 1px solid #00000017
+                        border-radius: $radius-xs
+                        img
+                            width: 50%
+        .row2
+            @include felex-between
+            border-bottom: 1px solid #00000017
+            padding-bottom: $xl-size
+            margin-bottom: $xl-size
+            .col1
+                flex-basis: 60%
+                .available-application
+                    @include felex-between
+                    .app-col1
+                        @include felex-between
+                        flex-basis: 50%
+                        margin-top: 30px
+                        .bazar
+                            flex-basis: 50%
+                            @include felex-start
+                            cursor: pointer
+                            .box-bazar
+                                height: 23px
+                                img
+                                    width: 100%
+                        .googleplay
+                            flex-basis: 50%
+                            @include felex-start
+                            cursor: pointer
+                            .box-googleplay
+                                height: 23px
+                                img
+                                    width: 100%
+                    .app-col2
+                        @include felex-between
+                        flex-basis: 50%
+                        margin-top: 30px
+                        .sibapp
+                            flex-basis: 50%
+                            @include felex-start
+                            cursor: pointer
+                            .box-sibapp
+                                height: 23px
+                                img
+                                    width: 100%
+                        .ispad
+                            flex-basis: 50%
+                            @include felex-start
+                            cursor: pointer
+                            .box-ispad
+                                height: 23px
+                                img
+                                    width: 100%
+            .col2
+                flex-basis: 40%
+                @include felex-end
+                padding-top: 50px
+                .phone1
+                    width: 260px
+                    margin-left: -110px
+                    img
+                        width: 100%
+                .phone2
+                    width: 260px
+                    img
+                        width: 100%
+        .row3
+            @include felex-between
+            align-items: stretch
+            .about
+                display: flex
+                flex-direction: column
+                flex-basis: 30%
+                padding: 0 5px 0 0
+            .access
+                flex-basis: 15%
+                padding: 0 10px 0 0
+                ul
+                    padding: 0
+                    li
+                        list-style: none
+            .contact
+                flex-basis: 25%
+                padding: 0 10px 0 0
+                ul
+                    padding: 0
+                    li
+                        list-style: none
+            .logs
+                flex-basis: 30%
+                @include felex-between
+                .log1-footer
+                    flex-basis: 33%
+                    @include felex-center
+                    .box-log1-footer
+                        border: 1px solid #00000018
+                        border-radius: $radius-xs
+                        padding: 17px 10px
+                        box-shadow: 1px 1px 5px 1px #88888836
+                        img
+                            width: 100%
+                .log2-footer
+                    flex-basis: 33%
+                    @include felex-center
+                    margin: 0 10px
+                    .box-log2-footer
+                        border: 1px solid #00000018
+                        box-shadow: 1px 1px 5px 1px #88888836
+                        border-radius: $radius-xs
+                        padding: 13px 10px
+                        img
+                            width: 100%
+                .log3-footer
+                    flex-basis: 33%
+                    @include felex-center
+                    .box-log3-footer
+                        border: 1px solid #00000018
+                        box-shadow: 1px 1px 5px 1px #88888836
+                        border-radius: $radius-xs
+                        padding: 15px 10px
+                        img
+                            width: 100%
+    p
+        font-size: $font-sm
+        color: $font-lightgray
